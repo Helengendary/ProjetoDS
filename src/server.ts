@@ -1,7 +1,10 @@
 import express from 'express';
 import initRoutes from './routes/routes.js'
+import connectDB from '../database/database.ts';
 
 const app = express();
+
+connectDB()
 initRoutes(app)
 
 const port = 8080;
